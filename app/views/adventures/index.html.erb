@@ -1,10 +1,15 @@
-<h1>Listing adventures</h1>
+<head> 
+	<title>ADVENTURE PAGE</title>
+</head>
 
+<center><h1 class="title_display">Listing of Adventures!</h1></center>
+<body><center>
 <table>
   <thead>
     <tr>
-      <th>Summary</th>
-      <th>Details</th>
+	<br><br><br>
+      <th id="titles">Summary</th>
+      <th id="titles">Details</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,8 +27,9 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table></center>
 
 <br>
 
-<%= link_to 'New Adventure', new_adventure_path %>
+<center><%= link_to 'New Adventure', new_adventure_path %></center>
+</body>

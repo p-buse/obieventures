@@ -1,3 +1,83 @@
 // Place all the styles related to the Adventures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.title_display {
+	/*color: #836FFF;*/
+	font-family: URW Gothic L;
+	font-size:110px;
+	color: #6959CD;
+	background-color: #FFFFF0;
+	text-align: center;
+}
+body {
+	background-color: #FFFFF0;
+}
+p {
+	text-align:left;
+}
+#justify {
+	text-align: justify;
+}
+h1 {
+	color: #6965CD;
+	text-align:center;
+	font-family: URW Gothic L;
+	font-size:20px;
+}
+.contact_us {
+	font-family: URW Gothic L;
+	font-size: 10px;
+	color: #8B8386;
+	text-align: center;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #CDC1C5;
+}
+
+a:visted {
+	text-decoration: none;
+	color: #CDC1C5;
+}
+a:link {
+	text-decoration: none;
+	color: #8B8386;
+}
+
+#footer {
+   	position: absolute;
+   	bottom: 0;
+   	width: 99%;
+   	height: 60px;   /* Height of the footer */
+	text-align: center;
+}
+.submit_box {
+	border: 1px solid #6965CD;
+	border-radius:5px;
+	margin: auto;
+	margin-top: 60px;
+	padding: 50px;
+	height: 460px ;
+	width: 400px ;
+	background-color: #FFFFF9;
+
+}
+.display_box {
+	border: 1px solid #6965CD;
+        border-radius:5px;
+        margin: auto;
+        margin-top: 60px;
+        padding: 50px;
+        height: 105px ;
+        width: 400px ;
+        background-color: #FFFFF9;
+
+}
+#titles {
+	color: #6965CD;
+	font-size: 15px;
+	font-family: URW Gothic L;
+	text-align: center;
+
+}

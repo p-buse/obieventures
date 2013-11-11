@@ -1,3 +1,22 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a:hover {
+	text-decoration: none;
+	color: #CDC1C5;
+}
+
+a:visted {
+	text-decoration: none;
+	color: #CDC1C5;
+}
+a:link {
+	text-decoration: none;
+	color: #8B8386;
+}
+body {
+	background-color: #FFFFF0;
+}
+p {
+	text-align: center;
+}
