@@ -3,7 +3,6 @@ Obieventures::Application.routes.draw do
   match '/submit', to: 'static_pages#submit', via: 'get' 
   resources :adventures
 
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

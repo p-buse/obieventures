@@ -17,6 +17,7 @@ p {
 }
 #justify {
 	text-align: justify;
+	word-wrap: break-word;
 }
 h1 {
 	color: #6965CD;
@@ -44,7 +45,6 @@ a:link {
 	text-decoration: none;
 	color: #8B8386;
 }
-
 #footer {
    	position: absolute;
    	bottom: 0;
@@ -68,7 +68,7 @@ a:link {
         border-radius:5px;
         margin: auto;
         margin-top: 60px;
-        padding: 50px;
+        padding: 10%;
         height: 105px ;
         width: 400px ;
         background-color: #FFFFF9;

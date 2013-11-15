@@ -1,5 +1,4 @@
 <head>
-
 <link type="text/css" rel="stylesheet" href="stylesheet.css" />
 
 	<title>OBIEVENTURES</title>
@@ -17,11 +16,21 @@
 	<center>
 	</center>
 
-        <center><input type="text" name="box"><br>
+        <center>
         <script>
-
         </script>
-	<button type="button" onclick="alert('This feature is coming soon!')">Generate an Adventure!</button>
+	<%= 
+	#def generate
+        	num = rand(19)+1
+        	#while (Adventure.find(num).summary != NULL) {
+        	Adventure.find(num).summary
+	#end
+
+	 %>
+
+
+
+	<!--<button type="button" onclick="<%= generate %>">Generate an Adventure!</button>-->
 	</center>
 	</div>
 
