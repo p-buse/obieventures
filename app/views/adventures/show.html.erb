@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 <div class="display_box">
 <p>
+   Likes: <%= @adventure.likes %>
+   <%= button_to "Like", {:action => "like", :id => @adventure.id} , :method => :put %>
+</p>
+
+<p>
   <strong>Summary:</strong>
   <%= @adventure.summary %>
 </p>
@@ -11,7 +16,7 @@
 </p>
 
 <p>
-<%= link_to 'Edit', edit_adventure_path(@adventure) %> |
+<!--<%= link_to 'Edit', edit_adventure_path(@adventure) %> |-->
 <%= link_to 'Back', home_path %>
 </p>
 </div>

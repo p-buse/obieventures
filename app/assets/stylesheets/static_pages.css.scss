@@ -3,20 +3,91 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 a:hover {
 	text-decoration: none;
-	color: #CDC1C5;
+	/*color: #CDC1C5;*/
+	color: #8B8386;
 }
 
 a:visted {
 	text-decoration: none;
-	color: #CDC1C5;
+	color: #8B8386;
 }
 a:link {
 	text-decoration: none;
 	color: #8B8386;
 }
+
+p:visted {
+        text-decoration: none;
+        color: #8B8386;
+}
+p:link {
+        text-decoration: none;
+        color: #8B8386;
+}
+
 body {
 	background-color: #FFFFF0;
 }
 p {
 	text-align: center;
+}
+
+#adventure_title {
+	font-size: 500%;
+	line-height: 100%;
+}
+
+
+/* This is the button styler! */
+.classname {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7f7bd9), color-stop(1, #6965cd) );
+	background:-moz-linear-gradient( center top, #7f7bd9 5%, #6965cd 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f7bd9', endColorstr='#6965cd');
+	background-color:#7f7bd9;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0px;
+	border:1px solid #514db3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	color: white;
+	height:50px;
+	line-height:50px;
+	width:220px;
+	text-decoration:none;
+	text-align:center;
+}
+.classname:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6965cd), color-stop(1, #7f7bd9) );
+	background:-moz-linear-gradient( center top, #6965cd 5%, #7f7bd9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6965cd', endColorstr='#7f7bd9');
+	background-color:#6965cd;
+	color: white;
+}.classname:active {
+	position:relative;
+	top:1px;
+	color: white;
+}
+.classname:link {
+	color: white;
+}
+.classname:visited {
+	color: white;
 }

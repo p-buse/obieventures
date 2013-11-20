@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105235959) do
+ActiveRecord::Schema.define(version: 20131118055933) do
 
   create_table "adventures", force: true do |t|
     t.string   "summary"
-    t.string   "details"
+    t.text     "details"
+    t.integer  "likes",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "adventures", ["summary"], name: "index_adventures_on_summary", unique: true
 
 end

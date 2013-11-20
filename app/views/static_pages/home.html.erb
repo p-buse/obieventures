@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<HTML>
 <head>
 <link type="text/css" rel="stylesheet" href="stylesheet.css" />
 
@@ -19,26 +21,29 @@
         <center>
         <script>
         </script>
-	<%= 
-	#def generate
-        	num = rand(19)+1
-        	#while (Adventure.find(num).summary != NULL) {
-        	Adventure.find(num).summary
-	#end
-
+	<div id="adventure_title">
+	<% 
+	def generate
+		$the_adventure = Adventure.all.sample
+	end
+	generate
 	 %>
+	<a href="adventures/<%= $the_adventure.id %>"><%= $the_adventure.summary %></a>
+	</div>
 
 
+<br><br><br><br><br><br><br><br>
+	<!--<button type="button" onclick="location.href('obieventures.cs.oberlin.edu');" >Generate an Adventure!</button>-->
+	<!--<a href="http://obieventures.cs.oberlin.edu/"><button>Generate an Adventure!</button></a>-->
+	<a href="http://obieventures.cs.oberlin.edu/" class="classname">Generate an Adventure!</a>
 
-	<!--<button type="button" onclick="<%= generate %>">Generate an Adventure!</button>-->
 	</center>
 	</div>
 
 	<p></p>
 
-	<br><br><br><br><br><br><br>
 
 	<center><p><%= link_to 'Submit Your Own Adventure!', new_adventure_path %></p></center>
-	<p class="contact_us" id="footer">contact us: obieventures@gmail.com || <a href="http://cs.oberlin.edu/~smater">sam mater</a> || <a href="http://cs.oberlin.edu/~astaffor">adam stafford</a> || <a href="http://cs.oberlin.edu/~pbuser">paul buser</a> || 2013</p>
-	</HTML>
-</body>
+	<%= render 'layouts/footer' %>
+	</body>
+</html>

@@ -18,16 +18,17 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+/*a {
+  color: #8B8386;
   &:visited {
-    color: #666;
+    color: #8B8386;
   }
   &:hover {
-    color: #fff;
+    color: #CDC1C5;
     background-color: #000;
   }
-}
+}*/
+a:visited { color: #8B8386;} 
 
 div {
   &.field, &.actions {

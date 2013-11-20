@@ -21,6 +21,21 @@ class AdventuresController < ApplicationController
   def edit
   end
 
+  #Added by Adam. Stolen from http://archive.railsforum.com/viewtopic.php?id=46646.
+  def like
+    @adventure = Adventure.find(params[:id])
+    #if statement eventually won't be needed
+    if @adventure.likes == nil
+      @adventure.likes = 0
+    end
+    @adventure.likes += 1
+    @adventure.save!
+    respond_to do |format|
+      format.html {redirect_to :action=>:show}
+      format.js
+    end
+  end
+
   # POST /adventures
   # POST /adventures.json
   def create

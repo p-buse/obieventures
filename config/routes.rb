@@ -1,7 +1,11 @@
 Obieventures::Application.routes.draw do
   match '/home', to: 'static_pages#home', via: 'get'
   match '/submit', to: 'static_pages#submit', via: 'get' 
-  resources :adventures
+  resources :adventures #, except: [:destroy, :edit, :index]
+
+  #Bothersome hardcoding - allows for the "like" function to be called
+  #(related to: adventures_controller, adventures "show" view)
+  match '/adventures/:id/like', to: 'adventures#like', via: 'put'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
