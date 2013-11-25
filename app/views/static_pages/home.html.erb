@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <HTML>
 <head>
+
 <link type="text/css" rel="stylesheet" href="stylesheet.css" />
 
 	<title>OBIEVENTURES</title>
 	<link rel="icon" type="image/ico" href="smater.ico"/>
+	<%= javascript_include_tag "jquery-2.0.3.min.js" %>
 </head>
 
 
@@ -44,6 +46,6 @@
 
 
 	<center><p><%= link_to 'Submit Your Own Adventure!', new_adventure_path %></p></center>
-	<%= render 'layouts/footer' %>
+	<%= render 'footer' %>
 	</body>
 </html>

@@ -2,7 +2,9 @@
 <div class="display_box">
 <p>
    Likes: <%= @adventure.likes %>
-   <%= button_to "Like", {:action => "like", :id => @adventure.id} , :method => :put %>
+   <% cookies[:likes] ||= ActiveSupport::JSON.encode([]) %>
+   <% likeStat = (ActiveSupport::JSON.decode(cookies[:likes]).include? (params[:id])) ? "Unlike" : "Like" %>
+   <%= button_to "#{likeStat}", {:action => "like", :id => @adventure.id} , :method => :put %>
 </p>
 
 <p>

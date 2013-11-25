@@ -28,8 +28,24 @@ class AdventuresController < ApplicationController
     if @adventure.likes == nil
       @adventure.likes = 0
     end
-    @adventure.likes += 1
-    @adventure.save!
+    #create an empty array labeled likes in the cookie if it doesn't exist
+    #The following usage of ActiveSupport::JSON allows us to deal with arrays
+    cookies.permanent[:likes] ||= ActiveSupport::JSON.encode([])
+    likes = ActiveSupport::JSON.decode(cookies[:likes])
+    #if the user has already liked the adventure, unlike it.
+    if likes.include?(params[:id])
+      likes.delete(params[:id])
+      cookies[:likes] = ActiveSupport::JSON.encode(likes)
+      @adventure.likes -= 1
+      @adventure.save!
+    #otherwise, like it and clear the marker from their cookie.
+    else
+      likes << params[:id]
+      cookies[:likes] = ActiveSupport::JSON.encode(likes)
+      @adventure.likes += 1
+      @adventure.save!
+    end
+    #here there be majicks
     respond_to do |format|
       format.html {redirect_to :action=>:show}
       format.js
