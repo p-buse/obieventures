@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<HTML>
-<head>
-
-<link type="text/css" rel="stylesheet" href="stylesheet.css" />
-
-	<title>OBIEVENTURES</title>
-	<link rel="icon" type="image/ico" href="smater.ico"/>
-	<%= javascript_include_tag "jquery-2.0.3.min.js" %>
-</head>
-
-
-<body>
-	<HTML>
-	<br>
-	<br>
-	<p class="title_display">OBIEVENTURES</p>
-	<br>
-	<div>
-	<center>
-	</center>
-
-        <center>
-        <script>
-        </script>
+<p class="title_display">OBIEVENTURES</p>
+<div id="adventure_title">
 	<%= render 'adventure' %>
-
-<br><br><br><br><br><br><br><br>
-	<!--<button type="button" onclick="location.href('obieventures.cs.oberlin.edu');" >Generate an Adventure!</button>-->
-	<!--<a href="http://obieventures.cs.oberlin.edu/"><button>Generate an Adventure!</button></a>-->
+</div>
+<p>
 	<a href="http://obieventures.cs.oberlin.edu/" class="classname">Generate an Adventure!</a>
-
-	</center>
-	</div>
-
-	<p></p>
-
-
-	<center><p><%= link_to 'Submit Your Own Adventure!', new_adventure_path %></p></center>
-	<%= render 'footer' %>
-	</body>
-</html>
+</p>
+<p>
+	<%= link_to 'Submit Your Own Adventure!', new_adventure_path %>
+</p>
+<%= render 'footer' %>
