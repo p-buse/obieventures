@@ -23,16 +23,7 @@
         <center>
         <script>
         </script>
-	<div id="adventure_title">
-	<% 
-	def generate
-		$the_adventure = Adventure.all.sample
-	end
-	generate
-	 %>
-	<a href="adventures/<%= $the_adventure.id %>"><%= $the_adventure.summary %></a>
-	</div>
-
+	<%= render 'adventure' %>
 
 <br><br><br><br><br><br><br><br>
 	<!--<button type="button" onclick="location.href('obieventures.cs.oberlin.edu');" >Generate an Adventure!</button>-->
