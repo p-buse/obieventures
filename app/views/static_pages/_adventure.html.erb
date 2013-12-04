@@ -1,0 +1,21 @@
+<% $the_adventure = Adventure.all.sample %>
+<%= $the_adventure.summary %>
+<h1>
+	<%=
+	unless $the_adventure.details == ""
+		$the_adventure.details
+	end
+	%>
+</h1>
+<p>
+   Likes: <%= 
+		unless $the_adventure.likes == nil
+		 $the_adventure.likes
+		else
+		 0
+		end
+	%>
+   <% cookies[:likes] ||= ActiveSupport::JSON.encode([]) %>
+   <% likeStat = (ActiveSupport::JSON.decode(cookies[:likes]).include? (params[:id])) ? "Unlike" : "Like" %>
+   <%= button_to "#{likeStat}", {:controller => 'adventures', :action => "like", :id => $the_adventure.id} , :method => :put %>
+</p>
