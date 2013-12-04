@@ -47,8 +47,8 @@ class AdventuresController < ApplicationController
     end
     #here there be majicks
     respond_to do |format|
-      format.html {redirect_to :action=>:show}
-      format.js
+      format.html {redirect_to :action=>'show'}
+      #format.js
     end
   end
 
