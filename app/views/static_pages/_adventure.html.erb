@@ -19,8 +19,6 @@
 	</p>
 <p>
    <% cookies[:likes] ||= ActiveSupport::JSON.encode([]) %>
-   <% likeStat = (ActiveSupport::JSON.decode(cookies[:likes]).include? (params[:id])) ? "Unlike" : "Like" %>
-   <%= link_to "#{likeStat}", {:controller => 'adventures', :action => "like" , :id => $the_adventure.id } , {:class => "buttonTo" , :method => :put  }  do %>
-	<%= image_tag "liked_zps4b7a586b.png" %>
-	<% end %>
+<% likeStat = (ActiveSupport::JSON.decode(cookies[:likes]).include? (params[:id])) ? image_tag('liked_zps4b7a586b.png') : image_tag('like_zpsde970af6.png') %>
+   <%= link_to likeStat, {:controller => 'adventures', :action => "like" , :id => $the_adventure.id } , {:method => :put  } %>
 </p>
