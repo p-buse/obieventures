@@ -92,3 +92,15 @@ p {
 .classname:visited {
 	color: white;
 }
+
+.buttonTo {
+	background: url(liked_zps4b7a586b.png);
+	background-repeat: no-repeat;
+        width: 20px; height: 20px;
+        background-position: center top;
+        text-indent: -9999px;
+	cursor: pointer;
+	/*display: block;*/
+	align: center;
+
+}
